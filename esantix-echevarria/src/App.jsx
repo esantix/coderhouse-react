@@ -5,17 +5,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1> Proyecto React para CODERHOUSE</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://coderhouse.slack.com/archives/D02MEM0DH8R"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+         
+
+           Contactame por <img src="/icons/slack_logo.svg" alt="" />
         </a>
       </header>
     </div>
