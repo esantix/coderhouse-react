@@ -2,9 +2,8 @@ const BarBtn = (props) => {
     return (
         <div className="BarBtn-ctn">
             <div className="BarBtn">
-                <img src="" alt="" />
                 <p> {props.name}</p>
-                </div>
+            </div>
 
         </div>
     )
@@ -15,11 +14,14 @@ function NavBar(props) {
 
     return (
         <div className="NavBar">
+            <div id="nav-logo">ESANTIX</div>
+            <div className="tabs-ctn">
+                <BarBtn name="Products" />
+                <BarBtn name="Information" />
+                <BarBtn name="Help" />
+            </div>
 
 
-            <BarBtn name="Products" />
-            <BarBtn name="Information" />
-            <BarBtn name="Help" />
 
         </div>
     )
