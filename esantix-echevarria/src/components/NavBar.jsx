@@ -14,15 +14,15 @@ function NavBar(props) {
 
     return (
         <div className="NavBar">
-            <div id="nav-logo">ESANTIX</div>
+            <div id="nav-logo"> <p>eSantix Designs</p> </div>
             <div className="tabs-ctn">
-                <BarBtn name="Products" />
+                <BarBtn name="Works" />
                 <BarBtn name="Information" />
-                <BarBtn name="Help" />
+                <BarBtn name="Contact us" />
             </div>
 
 
-
+img
         </div>
     )
 
