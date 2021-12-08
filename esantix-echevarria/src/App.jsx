@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 
 function App() {
@@ -10,6 +11,10 @@ function App() {
       </NavBar>
       <div className="page-ctn">
    
+<ItemListContainer greeting="Welcome!">
+
+</ItemListContainer>
+
       </div>
     </div>
   );
