@@ -2,6 +2,12 @@
     
  margin: 20px;
 
+
+}
+
+.ListItem{
+    display: flex;
+    flex-direction: row;
 }
 
 #greeting-msg{   color:black;z-index: 99;
