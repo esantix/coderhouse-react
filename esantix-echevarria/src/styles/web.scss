@@ -1,11 +1,12 @@
 .counterCtn{
+
     display: flex;
     flex-direction: row;
     background-color: white;
     width: fit-content;
     border: solid 1px black;
     box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
-    margin-right: 10px;
+  
 
 }
 
@@ -17,4 +18,14 @@
 
 .counterValue{
     color: black;
+}
+
+.ItemCounterCtn{    padding: 5px;
+    margin-right: 10px;
+    background-color: gray;
+}
+
+.counterAdd{
+    font-size: 10px;
+    cursor: pointer;
 }
