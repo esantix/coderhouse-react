@@ -5,7 +5,7 @@ function ItemCount(props) {
 
     const [state, setstate] = useState(0);
 
-    const add = () => { if (state < Number(props.stock)) { setstate(state + 1) }  else{alert("No more stock available")}};
+    const add = () => { if (state < Number(props.stock)) { setstate(state + 1) }  else{alert("Sorry that's all we got!")}};
     const subs = () => { if (state >= 1) { setstate(state - 1) } }
 
     const addCart = () => { alert("Item/s added") }

@@ -1,7 +1,8 @@
 
-import loadingGif from "./loading.gif"
 import { useState , useEffect} from 'react';
 import Item from "./Item"
+import LoadingBanner from './LoadingBanner'
+
 
 const FAKE_CATALOGUE = [
     { "id": 1, "stock": 10 },
@@ -9,14 +10,6 @@ const FAKE_CATALOGUE = [
     { "id": 3, "stock": 10 },
     { "id": 4, "stock": 10 }]
 
-
-function LoadingBanner(props) {
-
-    return <div className="loadingBanner">
-        <p>{props.msg}</p>
-        <img src={loadingGif} alt="" />
-    </div>
-}
 
 
 function ItemListContainer(props) {
