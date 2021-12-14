@@ -10,10 +10,10 @@ function App() {
 
       </NavBar>
       <div className="page-ctn">
-   
-<ItemListContainer greeting="Welcome!">
 
-</ItemListContainer>
+        <ItemListContainer className="ItemListContainer" greeting="Welcome!">
+
+        </ItemListContainer>
 
       </div>
     </div>

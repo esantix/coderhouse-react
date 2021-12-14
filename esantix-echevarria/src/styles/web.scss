@@ -1,31 +1,42 @@
-.counterCtn{
 
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    width: fit-content;
-    border: solid 1px black;
+
+
+@import "./animations";
+
+@font-face {
+    font-family: "myfont";
+    src: local("myfont"), url("../fonts/Barcelony.ttf") format("truetype");
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+#root {
+    height: 100%;
+}
+.page-block {
+    position: absolute;
+    right: 500px;
     box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.3);
-  
+    margin-left: 80px;
+    margin-top: 80px;
+    width: 500px;
+    height: 500px;
 
+    animation: menu-appear 0.6s forwards;
+}
+.App {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.counterChange{
-    margin: 0px 10px;
-    color: blue;
-    cursor: pointer;
-}
-
-.counterValue{
-    color: black;
-}
-
-.ItemCounterCtn{    padding: 5px;
-    margin-right: 10px;
-    background-color: gray;
-}
-
-.counterAdd{
-    font-size: 10px;
-    cursor: pointer;
+.page-ctn {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(160deg, rgb(255, 255, 255), rgb(245, 223, 223));
 }

@@ -1,4 +1,4 @@
-import logo from "./cart.png"
+import logo from "./cart_count.svg"
 
 
 function CartWidget (){
