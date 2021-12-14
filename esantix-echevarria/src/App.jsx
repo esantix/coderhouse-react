@@ -11,7 +11,7 @@ function App() {
       </NavBar>
       <div className="page-ctn">
 
-        <ItemListContainer className="ItemListContainer" greeting="Welcome!">
+        <ItemListContainer className="ItemListContainer" greeting="Welcome to our page!">
 
         </ItemListContainer>
 
