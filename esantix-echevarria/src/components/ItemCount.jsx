@@ -3,12 +3,15 @@ import cartLogo from "./cart.svg"
 
 function ItemCount(props) {
 
-    const [state, setstate] = useState(0);
+    const [state, setState] = useState(0);
 
-    const add = () => { if (state < Number(props.stock)) { setstate(state + 1) }  else{alert("Sorry that's all we got!")}};
-    const subs = () => { if (state >= 1) { setstate(state - 1) } }
+    const add = () => {
+        if (state < Number(props.stock)) { setState(state + 1) }
+        else { alert("Sorry that's all we got!") }
+    };
+    const subs = () => { if (state >= 1) { setState(state - 1) } }
 
-    const addCart = () => { alert("Item/s added") }
+    const addCart = () => { if(state >= 1){alert(`${state} item/s added`); setState(0) } else{alert("Quantity must be larger than 0")}}
 
 
 
@@ -20,7 +23,7 @@ function ItemCount(props) {
                 <div className="counterChange" onClick={subs} ><p>-</p></div>
             </div>
             <div className="counterAdd" onClick={addCart} >
-                <p>Add to cart</p> 
+                <p>Add to cart</p>
                 {/* <img src={cartLogo} alt="" /> */}
             </div>
         </div>
