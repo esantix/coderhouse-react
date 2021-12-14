@@ -1,5 +1,11 @@
 import ItemCount from "./ItemCount"
 import prodExample from "./prod.png"
+import loadingGif from "./loading.gif"
+import { useState } from 'react';
+
+
+
+
 
 function ListItem(props) {
     return (
@@ -13,20 +19,30 @@ function ListItem(props) {
 
 }
 
+function LoadingBanner(props) {
 
-const elements = [
-    { "name": 'Product-1', "stock": 10, "price": 10 },
-    { "name": 'Product-2', "stock": 2, "price": 10 },
-    { "name": 'Product-3', "stock": 10, "price": 10 },
-    { "name": 'Product-4', "stock": 10, "price": 10 },
-
-
-]
-
+    return <div className="loadingBanner"><p>{props.msg}</p>  <img src={loadingGif} alt="" /></div>
+}
 
 
 function ItemListContainer(props) {
-    // El stock vendrá de una base de datos son un fetch
+    const [catalogue, setCatalogue] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    async function getItems() {
+        // simular un fetch lento
+        await new Promise(resolve => setTimeout(resolve, 3000));
+        setCatalogue([
+            { "name": 'Product-1', "stock": 10, "price": 10 },
+            { "name": 'Product-2', "stock": 2, "price": 10 },
+            { "name": 'Product-3', "stock": 10, "price": 10 },
+            { "name": 'Product-4', "stock": 10, "price": 10 },
+        ])
+        setLoading(false)
+
+    }
+
+    getItems()
 
     return (
         <div>
@@ -34,13 +50,11 @@ function ItemListContainer(props) {
                 <h1 id="greeting-msg"> {props.greeting} </h1>
             </div>
             <div className="ItemListContainer">
-
+                {loading && <LoadingBanner msg="LOADING PRODUCTS..." />}
                 {
-                    elements.map(
+                    catalogue.map(
                         (elem) => {
-                            return (<ListItem stock={elem.stock} name={elem.name}>
-
-                            </ListItem>)
+                            return <ListItem stock={elem.stock} name={elem.name} />
                         }
                     )
                 }

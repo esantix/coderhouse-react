@@ -1,11 +1,27 @@
-
-
-
 @import "./animations";
 
 @font-face {
     font-family: "myfont";
     src: local("myfont"), url("../fonts/Barcelony.ttf") format("truetype");
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.loadingBanner {
+    display: flex;
+    flex-direction: row;
+    p {
+        margin: auto;
+    }
+    img {
+        margin-left: 20px;
+        width: 40px;
+    }
 }
 html,
 body {
