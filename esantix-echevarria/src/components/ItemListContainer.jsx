@@ -1,23 +1,9 @@
-import ItemCount from "./ItemCount"
-import prodExample from "./prod.png"
+
 import loadingGif from "./loading.gif"
 import { useState } from 'react';
+import Item from "./Item"
 
 
-
-
-
-function ListItem(props) {
-    return (
-
-        <div className="ListItem">
-            <h2> {props.name}</h2>
-            <img clasName="itemImage" src={prodExample} alt="" />
-            <ItemCount stock={props.stock} />
-        </div>
-    )
-
-}
 
 function LoadingBanner(props) {
 
@@ -54,7 +40,7 @@ function ItemListContainer(props) {
                 {
                     catalogue.map(
                         (elem) => {
-                            return <ListItem stock={elem.stock} name={elem.name} />
+                            return <Item stock={elem.stock} name={elem.name} />
                         }
                     )
                 }
