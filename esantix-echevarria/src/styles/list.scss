@@ -1,3 +1,5 @@
+$itmeColor: #103394e7;
+
 .ItemListContainer {
     display: flex;
     flex-direction: row;
@@ -5,16 +7,18 @@
     flex-wrap: wrap;
 }
 
+
 .ItemDetail {
     h2 {
         font-family: "myfont";
         margin: 10px 25px;
-        color: rgb(27, 90, 16);
+        color: $itmeColor;
     }
 
     .detailsCtn {
         display: flex;
         flex-direction: row;
+        margin-bottom: 100px;
     }
 
     img {
@@ -22,7 +26,6 @@
         margin: 10px 20px;
     }
 }
-
 .Item {
     margin-top: 20px;
     margin-right: 20px;
@@ -43,19 +46,17 @@
         flex-direction: row;
 
         justify-content: space-around;
-        background-color: #45553ebb;
+        background-color: $itmeColor;
         .counterCtn {
-            margin: 5px 0px;
-
+            margin: 8px 0px;
             display: flex;
             flex-direction: colum;
             background-color: white;
-            width: fit-content;
             border: solid 1px black;
 
             .counterChange {
-                margin: 0px 20px;
-                color: rgb(57, 97, 19);
+                margin: 0px 5px;
+                color: $itmeColor;
                 cursor: pointer;
                 p {
                     -webkit-user-select: none;
@@ -64,13 +65,14 @@
                     user-select: none;
                     margin: auto;
                     font-weight: bolder;
-                    font-size: 25px;
+                    font-size: 20px;
                 }
             }
 
             .counterValue {
-                font-size: 20px;
-                margin: auto;
+                margin: auto 5px;
+                font-size: 15px;
+             
                 color: black;
             }
         }
