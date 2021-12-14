@@ -1,12 +1,14 @@
 import ItemCount from "./ItemCount"
-import prodExample from "./prod.png"
+import ItemDetailContainer from "./ItemDetailContainer"
+
 
 function Item(props) {
+
+
     return (
 
-        <div className="ListItem">
-            <h2> {props.name}</h2>
-            <img clasName="itemImage" src={prodExample} alt="" />
+        <div className="Item">
+            <ItemDetailContainer itemId={props.itemId}/>
             <ItemCount stock={props.stock} />
         </div>
     )

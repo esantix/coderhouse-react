@@ -13,7 +13,7 @@ function ItemCount(props) {
 
 
     return (
-        <div className='ItemCounterCtn'>
+        <div className='ItemCount'>
             <div className="counterCtn">
                 <div className="counterChange" onClick={add}><p>+</p></div>
                 <div className="counterValue"> {state}</div>

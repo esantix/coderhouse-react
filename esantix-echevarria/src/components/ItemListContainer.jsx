@@ -17,12 +17,12 @@ function ItemListContainer(props) {
 
     async function getItems() {
         // simular un fetch lento
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        await new Promise(resolve => setTimeout(resolve, 1000));
         setCatalogue([
-            { "name": 'Product-1', "stock": 10, "price": 10 },
-            { "name": 'Product-2', "stock": 2, "price": 10 },
-            { "name": 'Product-3', "stock": 10, "price": 10 },
-            { "name": 'Product-4', "stock": 10, "price": 10 },
+            { "name": 'Product-1', "id": "1", "stock": 10, "price": 10 },
+            { "name": 'Product-2', "id": "2", "stock": 2, "price": 10 },
+            { "name": 'Product-3', "id": "3", "stock": 10, "price": 10 },
+            { "name": 'Product-4', "id": "4", "stock": 10, "price": 10 },
         ])
         setLoading(false)
 
@@ -40,7 +40,7 @@ function ItemListContainer(props) {
                 {
                     catalogue.map(
                         (elem) => {
-                            return <Item stock={elem.stock} name={elem.name} />
+                            return <Item stock={elem.stock} name={elem.name} itemId={elem.id} />
                         }
                     )
                 }
