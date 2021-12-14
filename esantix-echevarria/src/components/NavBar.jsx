@@ -20,7 +20,7 @@ function NavBar(props) {
                 <p>eSantix Designs</p>
             </div>
             <div className="tabs-ctn">
-                <BarBtn name="Works" />
+                <BarBtn name="Products" />
                 <BarBtn name="Information" />
                 <BarBtn name="Contact us" />
                 <CartWidget> </CartWidget>

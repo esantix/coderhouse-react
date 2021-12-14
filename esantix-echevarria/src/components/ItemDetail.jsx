@@ -25,7 +25,7 @@ const FAKE_DETAILS_DB = {
         name: "Product-4",
         price: "1200",
         size: "large",
-        color: ""
+        color: "Yellow"
     }
 }
 
@@ -36,7 +36,8 @@ function ItemDetail(props) {
     const [itemData, setItemData] = useState({
         name: "",
         price: "-",
-        size: "-"
+        size: "-",
+        color:"-"
     });
 
     async function getItemData(id) {
@@ -63,6 +64,7 @@ function ItemDetail(props) {
                         <ul>
                             <li> Price: ${itemData.price}</li>
                             <li>Size: {itemData.size}</li>
+                            <li>Color: {itemData.color}</li>
 
                         </ul>
                     </div>
