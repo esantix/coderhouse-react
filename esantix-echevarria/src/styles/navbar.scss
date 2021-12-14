@@ -4,18 +4,21 @@
     margin:auto;
     margin-top: 20px;
     margin-right: 20px;
-    width:40px;
+    width:20px;
+    cursor: pointer;
 }
 
 .NavBar {
     $back:rgb(238, 238, 238);
-    position: relative;
-    z-index: 100;
+    // position: relative;
+    min-width: 100%;
+    z-index: 80;
+    justify-content: space-between;
     display: flex;
-    flex-direction: row;
+
     background: linear-gradient(-90deg, rgb(255, 255, 255), rgb(216, 216, 216));
-    height: 90px;
- 
+    // height: 50px;
+    border-bottom: 1px solid rgb(204, 204, 204);
 
     // linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
@@ -25,20 +28,20 @@
         margin-bottom: auto;
         p {
             margin: auto;
-            margin: 20px 0px;
+            margin: 8px 0px;
             font-family: "myfont";
             background: -webkit-linear-gradient(#333, rgb(134, 134, 134) );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             color: white;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 20px;
             border-color: transparent;
         
         }
     }
     .tabs-ctn {
-        position: absolute;
+        position: float;
         right: 0px;
         display: flex;
         flex-direction: row;
@@ -64,7 +67,7 @@
         }
         p {
             margin: auto;
-            margin: 30px 0px;
+            margin: 20px 0px;
 
             // font-family: "myfont";
             background: -webkit-linear-gradient(rgb(143, 143, 143), rgb(148, 0, 0));

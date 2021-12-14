@@ -24,10 +24,11 @@
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
-    border: solid 1px black;
+    border: solid 1px rgba(0, 0, 0, 0.37);
     border-radius: 5px;
+    
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px 2px rgba(49, 49, 49, 0.3);
     &:hover{
         animation: zoom-hover 0s linear forwards;
     }
@@ -39,7 +40,7 @@
     }
 
     100% {
-        transform: scale(1.01);
+        transform: scale(1.05);
     }
 }
 
