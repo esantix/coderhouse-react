@@ -9,16 +9,16 @@
 }
 
 .NavBar {
-    $back:rgb(238, 238, 238);
+    $back:rgba(19, 102, 26, 0.349);
     // position: relative;
     min-width: 100%;
     z-index: 80;
     justify-content: space-between;
     display: flex;
 
-    background: linear-gradient(-90deg, rgb(255, 255, 255), rgb(216, 216, 216));
+    background: linear-gradient(-90deg, rgb(255, 255, 255), $back);
     // height: 50px;
-    border-bottom: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid $back;
 
     // linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
@@ -30,7 +30,7 @@
             margin: auto;
             margin: 8px 0px;
             font-family: "myfont";
-            background: -webkit-linear-gradient(#333, rgb(134, 134, 134) );
+            background: -webkit-linear-gradient(rgb(149, 149, 149), rgb(16, 54, 1) );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             color: white;
@@ -70,7 +70,7 @@
             margin: 20px 0px;
 
             // font-family: "myfont";
-            background: -webkit-linear-gradient(rgb(143, 143, 143), rgb(148, 0, 0));
+            background: -webkit-linear-gradient(rgb(143, 143, 143), rgb(22, 39, 29));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             color: white;
