@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .ItemDetail {
@@ -23,6 +24,7 @@
 }
 
 .Item {
+    margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 5px;
     display: flex;
