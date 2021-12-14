@@ -1,13 +1,21 @@
 
 import loadingGif from "./loading.gif"
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import Item from "./Item"
 
+const FAKE_CATALOGUE = [
+    { "id": 1, "stock": 10 },
+    { "id": 2, "stock": 2 },
+    { "id": 3, "stock": 10 },
+    { "id": 4, "stock": 10 }]
 
 
 function LoadingBanner(props) {
 
-    return <div className="loadingBanner"><p>{props.msg}</p>  <img src={loadingGif} alt="" /></div>
+    return <div className="loadingBanner">
+        <p>{props.msg}</p>
+        <img src={loadingGif} alt="" />
+    </div>
 }
 
 
@@ -17,18 +25,14 @@ function ItemListContainer(props) {
 
     async function getItems() {
         // simular un fetch lento
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        setCatalogue([
-            { "name": 'Product-1', "id": "1", "stock": 10, "price": 10 },
-            { "name": 'Product-2', "id": "2", "stock": 2, "price": 10 },
-            { "name": 'Product-3', "id": "3", "stock": 10, "price": 10 },
-            { "name": 'Product-4', "id": "4", "stock": 10, "price": 10 },
-        ])
-        setLoading(false)
-
+        await new Promise(resolve => setTimeout(resolve, 1000))
+            .then(() => {
+                setCatalogue(FAKE_CATALOGUE);
+                setLoading(false);
+            });
     }
 
-    getItems()
+    useEffect(() => {getItems()}, []);
 
     return (
         <div>
@@ -40,7 +44,7 @@ function ItemListContainer(props) {
                 {
                     catalogue.map(
                         (elem) => {
-                            return <Item stock={elem.stock} name={elem.name} itemId={elem.id} />
+                            return <Item stock={elem.stock} itemId={elem.id} />
                         }
                     )
                 }

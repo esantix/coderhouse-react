@@ -1,28 +1,45 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import prodExample from "./prod.png"
 
-
+const FAKE_DB = {
+            1: {
+                name: "Product-1",
+                price: "100",
+                size: "small"
+            },
+            2: {
+                name: "Product-2",
+                price: "1500",
+                size: "large"
+            },
+            3: {
+                name: "Product-3",
+                price: "200",
+                size: "big"
+            },
+            4: {
+                name: "Product-4",
+                price: "160",
+                size: "medium"
+            }
+        }
 
 
 function ItemDetail(props) {
     const [itemData, setItemData] = useState({
-        name: "Initial name",
-        price: "N/A",
-        size: "N/A"
-
+        name: "Product-1",
+        price: "100",
+        size: "small"
     });
 
-    function getItemData() {
-        // usat item id para tener su infode un fetch
-        const fakeData = {
-            name: "Some name",
-            price: "100$",
-            size: "big"
-        }
-        setItemData(fakeData)
+    async function getItemData(id) {
+        // Esto deberia ser un fetch con el ID del prioducto
+      await new Promise( () => {setItemData(FAKE_DB[id])})
     }
 
-    getItemData()
+    useEffect(() => {getItemData(props.itemId)}, []);
+    
+
     return (
         <div className="ItemDetail">
             <h2> {itemData.name}</h2>
