@@ -1,6 +1,6 @@
 
 import { useState , useEffect} from 'react';
-import Item from "./Item"
+import ItemList from "./ItemList"
 import LoadingBanner from './LoadingBanner'
 
 
@@ -34,13 +34,7 @@ function ItemListContainer(props) {
             </div>
             <div className="ItemListContainer">
                 {loading && <LoadingBanner msg="LOADING PRODUCTS..." />}
-                {
-                    catalogue.map(
-                        (elem) => {
-                            return <Item stock={elem.stock} itemId={elem.id} />
-                        }
-                    )
-                }
+                <ItemList data={catalogue} ></ItemList>
             </div>
         </div>
     )
