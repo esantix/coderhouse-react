@@ -31,23 +31,29 @@ const FAKE_DETAILS_DB = {
 
 
 function ItemDetail(props) {
+    console.log("ITEM ID:" + props.itemId)
 
     const [loading, setLoading] = useState(true);
     const [itemData, setItemData] = useState({
-        name: "",
+        name: "-",
         price: "-",
         size: "-",
         color:"-"
     });
 
     async function getItemData(id) {
+        
         // Esto deberia ser un fetch con el ID del prioducto
-        await new Promise(resolve => setTimeout(resolve, 1000)).then(
+        await new Promise(resolve => setTimeout(resolve, 300)).then(
             () => {
-                setItemData(FAKE_DETAILS_DB[id]); setLoading(false);
+                setItemData(FAKE_DETAILS_DB[id]);
+                console.log(itemData)
+                setLoading(false);
             })
     }
 
+
+  
     useEffect(() => { getItemData(props.itemId) }, []);
 
 

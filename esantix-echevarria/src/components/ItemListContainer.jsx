@@ -18,7 +18,7 @@ function ItemListContainer(props) {
 
     async function getItems() {
         // simular un fetch lento
-        await new Promise(resolve => setTimeout(resolve, 1000))
+        await new Promise(resolve => setTimeout(resolve, 1300))
             .then(() => {
                 setCatalogue(FAKE_CATALOGUE);
                 setLoading(false);

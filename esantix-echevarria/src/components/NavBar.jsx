@@ -1,4 +1,5 @@
 import CartWidget from "./CartWidget"
+import { Link } from 'react-router-dom';
 
 const BarBtn = (props) => {
     return (
@@ -16,9 +17,11 @@ function NavBar(props) {
 
     return (
         <div className="NavBar">
-            <div id="nav-logo">
+
+            <Link to="/"> <div id="nav-logo">
                 <p>eSantix Designs</p>
-            </div>
+            </div></Link>
+
             <div className="tabs-ctn">
                 <BarBtn name="Products" />
                 <BarBtn name="Information" />
