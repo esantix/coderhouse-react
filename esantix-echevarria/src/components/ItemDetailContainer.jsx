@@ -5,17 +5,15 @@ import ItemDetail from './ItemDetail'
 
 
 function ItemDetailContainer(props) {
-    let itemIds = props.itemId
-
-
-    const { id} = useParams();
-    console.log("PARAM " + id)
     
-    useEffect(  ()=>{itemIds = id}, [id] )
+
+    const {id} = useParams();
+
+useEffect(()=>{console.log("ID is:..." + id)},[id])
 
     return (
         <div>
-            <ItemDetail itemId={itemIds}/>
+            <ItemDetail itemId={id}/>
         </div>
     )
 }

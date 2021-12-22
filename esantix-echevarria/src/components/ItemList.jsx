@@ -10,7 +10,7 @@ function ItemList(props) {
                          {
                     props.data.map(
                         (elem) => {
-                            return <Item stock={elem.stock} itemId={elem.id} />
+                            return <Item stock={elem.stock} itemId={elem.id} name={elem.name}/>
                         }
                     )
                 }

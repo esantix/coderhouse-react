@@ -1,3 +1,4 @@
+
 import ItemCount from "./ItemCount"
 import ItemDetailContainer from "./ItemDetailContainer"
 import { Link } from 'react-router-dom';
@@ -8,8 +9,8 @@ function Item(props) {
     return (
         <Link to={`/item/${props.itemId}`}>
             <div className="Item">
-
-                <ItemDetailContainer itemId={props.itemId} />
+                <h1>{props.name}</h1>
+           
                 <ItemCount stock={props.stock} />
             </div> </Link>
     )

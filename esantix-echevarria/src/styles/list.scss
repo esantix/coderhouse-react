@@ -4,7 +4,7 @@ $itmeColor: #103394e7;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 }
 
 
@@ -27,6 +27,11 @@ $itmeColor: #103394e7;
     }
 }
 .Item {
+    h1{
+        font-family: "myfont";
+        margin: 10px 25px;
+        color: $itmeColor;
+    }
     margin-top: 20px;
     margin-right: 20px;
     margin-bottom: 5px;
