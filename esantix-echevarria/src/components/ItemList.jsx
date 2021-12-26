@@ -6,14 +6,14 @@ function ItemList(props) {
 
     return (
 
-            <div className="ItemList">
-                         {
-                    props.data.map(
-                        (elem) => {
-                            return <Item stock={elem.stock} itemId={elem.id} name={elem.name}/>
-                        }
-                    )
-                }
+        <div className="ItemList">
+            {
+                props.data.map(
+                    (elem) => {
+                        return <Item stock={elem.stock} itemId={elem.id} key={elem.id} name={elem.name} />
+                    }
+                )
+            }
 
         </div>
     )

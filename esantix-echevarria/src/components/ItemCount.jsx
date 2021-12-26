@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import cartLogo from "./cart.svg"
 
 function ItemCount(props) {
 

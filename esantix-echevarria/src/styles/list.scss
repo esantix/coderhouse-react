@@ -10,6 +10,8 @@ $itmeColor: #103394e7;
 
 .ItemDetail {
     h2 {
+        margin-top:80px;
+        font-size:30px;
         font-family: "myfont";
         margin: 10px 25px;
         color: $itmeColor;
@@ -18,11 +20,11 @@ $itmeColor: #103394e7;
     .detailsCtn {
         display: flex;
         flex-direction: row;
-        margin-bottom: 100px;
+        margin-bottom: 10px;
     }
 
     img {
-        width: 70px;
+        width: 120px;
         margin: 10px 20px;
     }
 }
