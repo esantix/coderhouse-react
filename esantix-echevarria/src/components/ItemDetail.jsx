@@ -1,6 +1,29 @@
+
 import prodExample from "./prod.png"
+import { useState, useEffect, useCallback } from "react"
+import ItemCount from "./ItemCount"
+
 
 function ItemDetail(props) {
+    const [qtyAdded, setQtyAdded] = useState(0);
+
+    const sumbitCounterHandler = useCallback( (evt) => {
+        console.log(evt)
+        setQtyAdded(evt.detail.amount)
+        alert(qtyAdded)
+         }
+    )
+
+    useEffect(() => {
+        window.addEventListener('submitCounter', sumbitCounterHandler)
+   
+        return () => {
+            window.removeEventListener('submitCounter', sumbitCounterHandler)
+   
+        };
+    }, [sumbitCounterHandler]);
+
+
     return (
         <div className="ItemDetail">
             <h2> {props.data.name}</h2>
@@ -16,6 +39,7 @@ function ItemDetail(props) {
                         </ul>
                     </div>
                 </div>
+                <ItemCount stock={props.data.stock}/>
         </div>
     )
 }

@@ -48,60 +48,7 @@ $itmeColor: #103394e7;
         animation: zoom-hover 0s linear forwards;
         
     }
-    .ItemCount {
-        display: flex;
-        flex-direction: row;
-
-        justify-content: space-around;
-        background-color: $itmeColor;
-        .counterCtn {
-            margin: 8px 0px;
-            display: flex;
-            flex-direction: colum;
-            background-color: white;
-            border: solid 1px black;
-
-            .counterChange {
-                margin: 0px 5px;
-                color: $itmeColor;
-                cursor: pointer;
-                p {
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                    margin: auto;
-                    font-weight: bolder;
-                    font-size: 20px;
-                }
-            }
-
-            .counterValue {
-                margin: auto 5px;
-                font-size: 15px;
-             
-                color: black;
-            }
-        }
-
-        .counterAdd {
-            display: flex;
-            flex-direction: row;
-            margin-right: 15 px;
-
-            cursor: pointer;
-            p {
-                font-size: 15px;
-                color: white;
-                &:hover {
-                    color: black;
-                }
-            }
-            img {
-                width: 15px;
-            }
-        }
-    }
+    
 }
 
 @keyframes zoom-hover {
@@ -113,7 +60,60 @@ $itmeColor: #103394e7;
         transform: scale(1.06);
     }
 }
+.ItemCount {
+    display: flex;
+    flex-direction: row;
 
+    justify-content: space-around;
+    background-color: $itmeColor;
+    .counterCtn {
+        margin: 8px 0px;
+        display: flex;
+        flex-direction: colum;
+        background-color: white;
+        border: solid 1px black;
+
+        .counterChange {
+            margin: 0px 5px;
+            color: $itmeColor;
+            cursor: pointer;
+            p {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                margin: auto;
+                font-weight: bolder;
+                font-size: 20px;
+            }
+        }
+
+        .counterValue {
+            margin: auto 5px;
+            font-size: 15px;
+         
+            color: black;
+        }
+    }
+
+    .counterAdd {
+        display: flex;
+        flex-direction: row;
+        margin-right: 15 px;
+
+        cursor: pointer;
+        p {
+            font-size: 15px;
+            color: white;
+            &:hover {
+                color: black;
+            }
+        }
+        img {
+            width: 15px;
+        }
+    }
+}
 #greeting-msg {
     font-family: "myfont";
     font-weight: bolder;
