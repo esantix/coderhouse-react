@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function ItemCount(props) {
 
@@ -15,7 +17,7 @@ function ItemCount(props) {
 
 
     const submitPurchase = () => {
-        const submitCounter = new CustomEvent('submitCounter',{detail:{amount: "test qty"}});
+        const submitCounter = new CustomEvent('submitCounter',{detail:{amount: state}});
 
         if (state >= 1) { window.dispatchEvent(submitCounter);}
         else { alert("Quantity must be larger than 0")}
@@ -31,7 +33,9 @@ function ItemCount(props) {
                 <div className="counterChange" onClick={subs} ><p>-</p></div>
             </div>
             <div className="counterAdd" onClick={submitPurchase} >
-                <p>Add to cart</p>
+
+                <Link to="/cart">     <p>Add to cart</p></Link>
+           
                 {/* <img src={cartLogo} alt="" /> */}
             </div>
         </div>

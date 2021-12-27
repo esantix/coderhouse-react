@@ -22,6 +22,9 @@ function App() {
           <Route path="/item/:id" exact element={<ItemDetailContainer/>} >
           </Route>
 
+          <Route path="/cart" exact element={  <div></div>} >
+          </Route>
+
 
 
         </Routes>

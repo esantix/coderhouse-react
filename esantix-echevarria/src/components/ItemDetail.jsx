@@ -5,14 +5,15 @@ import ItemCount from "./ItemCount"
 
 
 function ItemDetail(props) {
-    const [qtyAdded, setQtyAdded] = useState(0);
+    const [qtyAdded, setQtyAdded] = useState(false);
 
-    const sumbitCounterHandler = useCallback( (evt) => {
+    const sumbitCounterHandler = 
+        (evt) => {
         console.log(evt)
         setQtyAdded(evt.detail.amount)
-        alert(qtyAdded)
+     
          }
-    )
+    
 
     useEffect(() => {
         window.addEventListener('submitCounter', sumbitCounterHandler)
@@ -21,7 +22,7 @@ function ItemDetail(props) {
             window.removeEventListener('submitCounter', sumbitCounterHandler)
    
         };
-    }, [sumbitCounterHandler]);
+    }, []);
 
 
     return (
@@ -39,7 +40,7 @@ function ItemDetail(props) {
                         </ul>
                     </div>
                 </div>
-                <ItemCount stock={props.data.stock}/>
+                {!qtyAdded && <ItemCount stock={props.data.stock}/>}
         </div>
     )
 }
