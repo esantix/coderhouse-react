@@ -21,7 +21,7 @@ function ItemListContainer(props) {
 
     return (
         <div>
-            <div>
+            <div className="ItemListCtn">
                 <h1 id="greeting-msg"> {props.greeting} </h1>
             </div>
             <div className="ItemListContainer">

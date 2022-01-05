@@ -2,39 +2,41 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { CartContextProvider } from './contexts/CartContext';
+
 
 function App() {
   return (
-    <div className="App">
+    <CartContextProvider>
+      <div className="App">
 
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
 
-          <Route path="/" exact element={
-            <ItemListContainer className="ItemListContainer" greeting="Welcome to our page!">
-            </ItemListContainer>} >
-          </Route>
+            <Route path="/" exact element={
+              <ItemListContainer className="ItemListContainer" greeting="Welcome to our page!">
+              </ItemListContainer>} >
+            </Route>
 
-          {/* <Route path="/category/:id" exact element={ <ItemListContainer />} >
+            {/* <Route path="/category/:id" exact element={ <ItemListContainer />} >
           </Route> */}
 
-          <Route path="/item/:id" exact element={<ItemDetailContainer/>} >
-          </Route>
+            <Route path="/item/:id" exact element={<ItemDetailContainer />} >
+            </Route>
 
-          <Route path="/cart" exact element={  <div></div>} >
-          </Route>
-
-
-
-        </Routes>
-      </BrowserRouter>
-      <div className="page-ctn">
+            <Route path="/cart" exact element={<div></div>} >
+            </Route>
 
 
 
+          </Routes>
+        </BrowserRouter>
+        <div className="page-ctn">
+
+        </div>
       </div>
-    </div>
+    </CartContextProvider>
   );
 }
 

@@ -10,20 +10,19 @@ function ItemCount(props) {
         if (state < Number(props.stock)) { setState(state + 1) }
         else { alert("Sorry that's all we got!") }
     };
-    const subs = () => { 
-        if (state >= 1) { setState(state - 1) } }
+    const subs = () => {
+        if (state >= 1) { setState(state - 1) }
+    }
 
 
 
 
     const submitPurchase = () => {
-        const submitCounter = new CustomEvent('submitCounter',{detail:{amount: state}});
+        const submitCounter = new CustomEvent('submitCounter', { detail: { amount: state} });
 
-        if (state >= 1) { window.dispatchEvent(submitCounter);}
-        else { alert("Quantity must be larger than 0")}
+        if (state >= 1) { window.dispatchEvent(submitCounter); }
+        else { alert("Quantity must be larger than 0") }
     }
-
-
 
     return (
         <div className='ItemCount'>
@@ -33,9 +32,9 @@ function ItemCount(props) {
                 <div className="counterChange" onClick={subs} ><p>-</p></div>
             </div>
             <div className="counterAdd" onClick={submitPurchase} >
+                <p>Add to cart</p>
+                {/* <Link to="/cart">     </Link> */}
 
-                <Link to="/cart">     <p>Add to cart</p></Link>
-           
                 {/* <img src={cartLogo} alt="" /> */}
             </div>
         </div>

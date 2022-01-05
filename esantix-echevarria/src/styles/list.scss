@@ -1,6 +1,6 @@
 $itmeColor: #103394e7;
 
-.ItemListContainer {
+.ItemList{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -12,7 +12,7 @@ $itmeColor: #103394e7;
     h2 {
         margin-top:80px;
         font-size:30px;
-        font-family: "myfont";
+ 
         margin: 10px 25px;
         color: $itmeColor;
     }
@@ -30,7 +30,7 @@ $itmeColor: #103394e7;
 }
 .Item {
     h1{
-        font-family: "myfont";
+
         margin: 10px 25px;
         color: $itmeColor;
     }
