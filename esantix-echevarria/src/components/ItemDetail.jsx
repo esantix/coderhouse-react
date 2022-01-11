@@ -6,10 +6,9 @@ import { CartContext } from "../contexts/CartContext";
 
 
 function ItemDetail(props) {
-    const addCartData = useContext(CartContext);
+    const value = useContext(CartContext);
 
-    console.log("-------")
-    console.log(typeof (pepe))
+    let addCartData = value[0]
 
 
 

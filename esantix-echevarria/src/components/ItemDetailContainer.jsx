@@ -17,7 +17,7 @@ function ItemDetailContainer(props) {
 
     async function getItemData(id) {
         // Esto deberia ser un fetch con el ID del prioducto
-        await new Promise(resolve => setTimeout(resolve, 300)).then(
+        await new Promise(resolve => setTimeout(resolve, 3)).then(
             () => {
                 setItemData(FAKE_DETAILS_DB[id]);
                 setLoading(false);

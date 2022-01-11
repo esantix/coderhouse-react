@@ -7,19 +7,30 @@ export const CartContext = React.createContext("AAA");
 export function CartContextProvider(props) { // provider FROM something TO context
     const [cartData, setcartData] = useState([]);
 
-    function addCartData(newItem) {
-
+    function addCartData(newItem) { // AddItem  newItem = [myname, amount]
+        console.log(newItem )
         let newValue = cartData
-        newValue.push(newItem)
-        console.log(":)")
-        console.log(newItem)
+        newValue[newItem[0]] = newItem[1]
+
         setcartData(newValue)
 
         console.log(cartData)
     }
 
+    function removeCartData(itemName) { 
+   
+        let newValue = cartData
+        newValue[itemName] = 0
 
-    return <CartContext.Provider value={addCartData  }>
+        setcartData(newValue)
+
+        console.log(cartData)
+
+    }
+
+
+
+    return <CartContext.Provider value={[addCartData, cartData, removeCartData]}>
         {props.children}
     </CartContext.Provider>
 

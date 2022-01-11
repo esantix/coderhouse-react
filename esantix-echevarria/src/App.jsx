@@ -3,7 +3,7 @@ import ItemListContainer from './components/ItemListContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartContextProvider } from './contexts/CartContext';
-
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
             <Route path="/item/:id" exact element={<ItemDetailContainer />} >
             </Route>
 
-            <Route path="/cart" exact element={<div></div>} >
+            <Route path="/cart" exact element={<Cart></Cart>} >
             </Route>
 
 

@@ -28,6 +28,19 @@ body {
     height: 100%;
     margin: 0;
 }
+.cartReg{
+    display: flex;
+    flex-direction: row;
+    p{
+        margin: 20px;
+    }
+}
+
+.cartView{
+    margin: 100px;
+}
+
+
 #root {
     height: 100%;
 }
