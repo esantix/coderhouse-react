@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
 
 function ItemCount(props) {
 
     const [state, setState] = useState(0);
+    const [finished, setFinished] = useState(false);
 
     const add = () => {
         if (state < Number(props.stock)) { setState(state + 1) }
@@ -14,31 +13,40 @@ function ItemCount(props) {
         if (state >= 1) { setState(state - 1) }
     }
 
+    const finishPurchase =() => {
+        setFinished(true)
 
+    }
 
 
     const submitPurchase = () => {
         const submitCounter = new CustomEvent('submitCounter', { detail: { amount: state} });
 
-        if (state >= 1) { window.dispatchEvent(submitCounter); }
+        if (state >= 1) { window.dispatchEvent(submitCounter); console.log("submitCounter triggered") }
         else { alert("Quantity must be larger than 0") }
     }
 
+
+    if (finished){
+        return <div></div>
+    } else{
     return (
-        <div className='ItemCount'>
-            <div className="counterCtn">
+        
+         (<div className='ItemCount'>
+          <div className="counterCtn">
                 <div className="counterChange" onClick={add}><p>+</p></div>
                 <div className="counterValue"> {state}</div>
                 <div className="counterChange" onClick={subs} ><p>-</p></div>
             </div>
-            <div className="counterAdd" onClick={submitPurchase} >
-                <p>Add to cart</p>
-                {/* <Link to="/cart">     </Link> */}
+            <div className="counterAdd" >
+                <p className='counterbtn' onClick={submitPurchase} >Add to cart</p>
+                <p className='counterbtn'  onClick={finishPurchase}>Finish purchase</p>
 
-                {/* <img src={cartLogo} alt="" /> */}
             </div>
-        </div>
-    )
+
+
+        </div>)
+    )}
 
 }
 

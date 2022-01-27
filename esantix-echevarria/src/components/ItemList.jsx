@@ -3,7 +3,7 @@ import Item from "./Item"
 
 
 function ItemList(props) {
-    console.log(props.stock)
+ 
 
     return (
 
