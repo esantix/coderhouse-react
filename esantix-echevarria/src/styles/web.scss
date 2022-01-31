@@ -59,8 +59,43 @@ body {
   cursor: pointer;
 }
 .cartView {
+  display: flex;
+  flex-direction: row;
   margin: 100px;
+  #orderForm {
+    border: black 1px solid;
+    padding: 20px;
+    margin-left: 300px;
+    // margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    h2{}
+    p {
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      margin-bottom: 5px;
+      width: 200px;
+      input {
+        margin-left: 20px;
+        width: 200px;
+      }
+    }
+    button {
+
+  padding: 5px;
+  color: rgb(14, 87, 26);
+  border: 1px solid rgb(14, 90, 7);
+  cursor: pointer;
+      margin-top: 30px;
+      width: 100px;
+      background-color: rgba(59, 160, 81, 0.699);
+    }
+  }
 }
+
 .counterbtn {
   margin-left: 120px;
 }
